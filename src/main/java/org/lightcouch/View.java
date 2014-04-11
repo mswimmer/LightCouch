@@ -307,8 +307,8 @@ public class View {
 		// init page, query view
 		Page<T> page = new Page<T>();
 		List<T> pageList = new ArrayList<T>();
-		ViewResult<String, String, T> vr = queryView(String.class, String.class, classOfT);
-		List<ViewResult<String, String, T>.Rows> rows = vr.getRows();
+		ViewResult<String, JsonObject, T> vr = queryView(String.class, JsonObject.class, classOfT);
+		List<ViewResult<String, JsonObject, T>.Rows> rows = vr.getRows();
 		int resultRows = rows.size();
 		int offset = vr.getOffset();
 		long totalRows = vr.getTotalRows();
